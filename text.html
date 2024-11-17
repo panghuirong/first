@@ -1,0 +1,83 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>在线考试系统</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div id="login">  
+        <h2>考生登录</h2>  
+        <form id="loginForm">  
+            <label for="username">用户名:</label>  
+            <input type="text" id="username" name="username" required>  
+            <label for="password">密码:</label>  
+            <input type="password" id="password" name="password" required>  
+            <button type="submit">登录</button>  
+        </form>  
+    </div>  
+  
+    <div id="exam" style="display: none;">  
+        <h2>在线考试</h2>  
+        <form id="examForm">  
+            <h3>单选题 (每题2分)</h3>  
+            <div class="question">  
+                1. 哪种语言常用于Web前端开发？  
+                <label><input type="radio" name="q1" value="a"> A. Java</label>  
+                <label><input type="radio" name="q1" value="b"> B. JavaScript</label>  
+                <label><input type="radio" name="q1" value="c"> C. Python</label>  
+            </div>  
+            <div class="question">  
+                2. HTML的全称是什么？  
+                <label><input type="radio" name="q2" value="a"> A. HyperText Markup Language</label>  
+                <label><input type="radio" name="q2" value="b"> B. HyperText Markup Layer</label>  
+                <label><input type="radio" name="q2" value="c"> C. HyperText Markup Link</label>  
+            </div>  
+            <div class="question">  
+                3. 哪个标签用于创建段落？  
+                <label><input type="radio" name="q3" value="a"> A. <code>&lt;p&gt;</code></label>  
+                <label><input type="radio" name="q3" value="b"> B. <code>&lt;h1&gt;</code></label>  
+                <label><input type="radio" name="q3" value="c"> C. <code>&lt;div&gt;</code></label>  
+            </div>  
+            <div class="question">  
+                4. 哪个属性用于指定链接的目标URL？  
+                <label><input type="radio" name="q4" value="a"> A. <code>src</code></label>  
+                <label><input type="radio" name="q4" value="b"> B. <code>href</code></label>  
+                <label><input type="radio" name="q4" value="c"> C. <code>alt</code></label>  
+            </div>  
+            <div class="question">  
+                5. CSS代表什么？  
+                <label><input type="radio" name="q5" value="a"> A. Cascading Style Sheets</label>  
+                <label><input type="radio" name="q5" value="b"> B. Cascading Style Sheets Language</label>  
+                <label><input type="radio" name="q5" value="c"> C. Color Style Sheets</label>  
+            </div>  
+  
+            <h3>多选题 (每题5分, 错选多选均不得分)</h3>  
+            <div class="question">  
+                6. 下列哪些是JavaScript的基本数据类型？  
+                <label><input type="checkbox" name="q6" value="a"> A. Number</label>  
+                <label><input type="checkbox" name="q6" value="b"> B. String</label>  
+                <label><input type="checkbox" name="q6" value="c"> C. Boolean</label>  
+                <label><input type="checkbox" name="q6" value="d"> D. Function</label>  
+            </div>  
+            <div class="question">  
+                7. 下列哪些是HTML5的新特性？  
+                <label><input type="checkbox" name="q7" value="a"> A. <code>&lt;audio&gt;</code></label>  
+                <label><input type="checkbox" name="q7" value="b"> B. <code>&lt;video&gt;</code></label>  
+                <label><input type="checkbox" name="q7" value="c"> C. <code>&lt;table&gt;</code></label>  
+                <label><input type="checkbox" name="q7" value="d"> D. <code>&lt;canvas&gt;</code></label>  
+            </div>  
+  
+            <button type="submit">提交试卷</button>  
+        </form>  
+    </div>  
+  
+    <div id="results" style="display: none;">  
+        <h2>测试结果</h2>  
+        <p id="score"></p>  
+    </div>  
+  
+    <script src="script.js"></script>  
+</body>  
+</html>
